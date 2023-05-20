@@ -6,8 +6,8 @@ export const siteConfig = {
     "Yum Swap is a food marketplace that focus on reducing food wastage.",
   mainNav: [
     {
-      title: "Home",
-      href: "/",
+      title: "Marketplace",
+      href: "/marketplace",
     },
   ],
 }

@@ -13,13 +13,12 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <span className="hidden font-bold sm:inline-block">
-          {siteConfig.name}
-        </span>
+      <Link href="/" className="items-center space-x-2 flex">
+        <img alt={"Logo"} src={"logo.png"} className={"w-36 object-contain"}
+        />
       </Link>
       {items?.length ? (
-        <nav className="hidden gap-6 md:flex">
+        <nav className="gap-6 flex">
           {items?.map(
             (item, index) =>
               item.href && (

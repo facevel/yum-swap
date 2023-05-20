@@ -1,6 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -24,24 +23,28 @@ interface Product {
 const ProductCard = ({ product }: { product: Product }) => {
   // @ts-ignore
   return (
-    <Card className="w-[350px]">
-      <CardHeader/>
+    <Card>
+      <CardHeader>
+        <CardTitle>{product.name}</CardTitle>
+        <CardDescription>{product.description}</CardDescription>
+        <img src={product.image}
+          alt={"Product"}
+             className={"h-64 object-cover rounded-lg"}
+        />
+      </CardHeader>
       <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="h-72 w-full rounded-md object-cover"
-              />
-            </div>
-          </div>
-        </form>
+        <p>Best Before: {product.expiry.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit"
+        })}</p>
       </CardContent>
-      <CardFooter className="flex flex-col gap-2 justify-start items-start">
-        <h1>{product.name}</h1>
-        <h1>{product.price}</h1>
+      <CardFooter>
+        <p>Manufactured: {product.manufacturer_date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit"
+        })}</p>
       </CardFooter>
     </Card>
   )
