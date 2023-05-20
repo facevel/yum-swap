@@ -1,5 +1,6 @@
 import {siteConfig} from "@/config/site"
 import {MainNav} from "@/components/main-nav"
+import {ThemeToggle} from "@/components/theme-toggle";
 
 export function SiteHeader() {
   return (
@@ -9,6 +10,7 @@ export function SiteHeader() {
         <div className="flex flex-1 items-center justify-end space-x-4">
 
         </div>
+        <ThemeToggle />
       </div>
     </header>
   )
