@@ -1,18 +1,13 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Yum Swap",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Yum Swap is a food marketplace that focus on reducing food wastage.",
   mainNav: [
     {
       title: "Home",
       href: "/",
     },
   ],
-  links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
-    docs: "https://ui.shadcn.com",
-  },
 }

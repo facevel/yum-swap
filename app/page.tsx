@@ -1,38 +1,38 @@
-import Link from "next/link"
+import { RiArrowRightSLine } from "react-icons/ri"
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 export default function IndexPage() {
   return (
     <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="flex max-w-[980px] flex-col items-start gap-2">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
+          <span className={"text-red-500"}>Yum Swap</span> - Revolutionizing
+          Food Waste: Manage, Analyze, Educate
         </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
+        <p className="max-w-[950px] text-justify text-lg text-muted-foreground sm:text-xl">
+          We&apos;re on a mission to reduce food waste, promote sustainability,
+          and foster resilient and inclusive communities. Our platform connects
+          food establishments with shelters, food banks, and charities to
+          facilitate the efficient redistribution of surplus food. With
+          real-time inventory management and automated alerts, we ensure safe
+          and timely delivery of food to those in need.
         </p>
       </div>
       <div className="flex gap-4">
-        <Link
-          href={siteConfig.links.docs}
-          target="_blank"
-          rel="noreferrer"
-          className={buttonVariants({ size: "lg" })}
-        >
-          Documentation
+        <Button variant="outline">Learn More</Button>
+        <Link href={"/marketplace"}>
+          <Button className={"flex flex-row items-center"}>
+            Continue to Marketplace
+            <RiArrowRightSLine className={"mt-0.5 text-2xl"} />
+          </Button>
         </Link>
-        <Link
-          target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
-          className={buttonVariants({ variant: "outline", size: "lg" })}
-        >
-          GitHub
-        </Link>
+      </div>
+      <div className={"mt-10 flex flex-col gap-4"}>
+        <h1 className="text-2xl font-semibold leading-tight tracking-tighter sm:text-2xl md:text-4xl lg:text-5xl">
+          Features we Provide
+        </h1>
       </div>
     </section>
   )
