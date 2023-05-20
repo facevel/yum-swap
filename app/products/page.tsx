@@ -2,7 +2,8 @@
 
 import {useEffect, useState} from "react";
 import {DataTable} from "@/app/products/api/data-tables";
-import {columns} from "@/app/products/columns";
+import getColumns from "@/app/products/columns";
+import {useRouter} from 'next/navigation'
 
 export interface Product {
   id: number;
@@ -19,7 +20,7 @@ export interface Product {
 export default function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([])
 
-
+  let router = useRouter()
   useEffect(() => {
 
     const options = {method: 'GET'};
@@ -38,15 +39,15 @@ export default function ProductsPage() {
     <div>
       <div>
         <section className="container items-center justify-center gap-6 pb-8 pt-6 md:py-10">
-          <div className="flex max-w-[980px] flex-col items-start gap-2 mb-6">
+          <div className="mb-6 flex max-w-[980px] flex-col items-start gap-2">
             <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-4xl lg:text-4xl">
               Good Evening, <br className="hidden sm:inline"/>
             </h1>
             <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
-             Prakhar, here is your current inventory.
+              Prakhar, here is your current inventory.
             </p>
           </div>
-          <DataTable columns={columns} data={products}/>
+          <DataTable columns={getColumns(router)} data={products}/>
         </section>
       </div>
     </div>
