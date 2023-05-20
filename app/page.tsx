@@ -1,6 +1,6 @@
-import { RiArrowRightSLine } from "react-icons/ri"
+import {RiArrowRightSLine} from "react-icons/ri"
 
-import { Button } from "@/components/ui/button"
+import {Button} from "@/components/ui/button"
 import Link from "next/link";
 
 export default function IndexPage() {
@@ -11,7 +11,7 @@ export default function IndexPage() {
           <span className={"text-red-500"}>Yum Swap</span> - Revolutionizing
           Food Waste: Manage, Analyze, Educate
         </h1>
-        <p className="max-w-[950px] text-justify text-lg text-muted-foreground sm:text-xl">
+        <p className="text-muted-foreground max-w-[950px] text-justify text-lg sm:text-xl">
           We&apos;re on a mission to reduce food waste, promote sustainability,
           and foster resilient and inclusive communities. Our platform connects
           food establishments with shelters, food banks, and charities to
@@ -25,7 +25,7 @@ export default function IndexPage() {
         <Link href={"/marketplace"}>
           <Button className={"flex flex-row items-center"}>
             Continue to Marketplace
-            <RiArrowRightSLine className={"mt-0.5 text-2xl"} />
+            <RiArrowRightSLine className={"mt-0.5 text-2xl"}/>
           </Button>
         </Link>
       </div>
