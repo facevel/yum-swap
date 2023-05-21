@@ -31,7 +31,7 @@ const ProductCard = ({product}: { product: Product }) => {
         <CardDescription>{product.description}</CardDescription>
         <p>₹ {product.price}</p>
       </CardHeader>
-      <CardContent className={"flex flex-col justify-center justify-center"}>
+      <CardContent className={"flex flex-col justify-center"}>
 
         <img src={product.image}
              alt={"Product"}
@@ -63,8 +63,8 @@ const ProductCard = ({product}: { product: Product }) => {
             router.push("/orders")
           }, 3000)
         }
-        } className={"w-full flex justify-center items-center"} size={"lg"}>{!loading ? "Buy Now" : (
-          <CgSpinner className={"text-2xl animate-spin"}/>
+        } className={"flex w-full items-center justify-center"} size={"lg"}>{!loading ? "Buy Now" : (
+          <CgSpinner className={"animate-spin text-2xl"}/>
         )}</Button>
       </CardFooter>
     </Card>
