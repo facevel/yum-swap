@@ -116,18 +116,34 @@ export function DataTable<TData, TValue>({
                               row.getValue("items").split(",").map((item: string, index: number) => {
                                 return (
                                   // <p className={"text-md"}>{index + 1}. {item.substring(1)} x {item.substring(0, 1)}</p>
-                                  <div className={"w-full bg-gray-100 dark:bg-gray-800 my-2 p-2 rounded-lg flex flex-row"}>
+                                  <div
+                                    className={"w-full bg-gray-100 dark:bg-gray-800 my-2 p-2 rounded-lg flex flex-row"}>
                                     <img src={
                                       item.substring(1).toLowerCase().includes('cola')
                                         ? 'coke.jpg'
-                                        : item.substring(1).toLowerCase().includes('sprite')
-                                          ? 'sprite.jpg'
-                                          : ''
+                                        : item.substring(1).toLowerCase().includes('pepsi')
+                                          ? 'pepsi.webp'
+                                          : item.substring(1).toLowerCase().includes('atta')
+                                            ? 'atta.jpg'
+                                            : ''
                                     }
                                          alt={"img"}
                                          className={"h-24 w-24 rounded-lg object-cover"}
                                     />
-                                    <p className={"ml-2 text-black dark:text-white"}>{item.substring(1)} <span className={"text-sm"}><br/>x{item.substring(0, 1)}</span></p>
+                                    <div className={"flex flex-col"}>
+                                      <p className={"ml-2 text-black dark:text-white"}>{item.substring(1)} <span
+                                        className={"text-sm"}>x{item.substring(0, 1)}</span></p>
+                                      <p className={"ml-2 text-black dark:text-white text-sm"}>
+                                        {item.substring(1).toLowerCase().includes('cola')
+                                          ? 'Expires On: 30/05/2023'
+                                          : item.substring(1).toLowerCase().includes('pepsi')
+                                            ? 'Expires On: 06/06/2023'
+                                            : item.substring(1).toLowerCase().includes('atta')
+                                              ? 'Expires on 05/06/2023'
+                                              : ''
+                                        }
+                                      </p>
+                                    </div>
                                   </div>
                                 )
                               })
