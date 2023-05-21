@@ -3,6 +3,7 @@
 import {ColumnDef, flexRender, getCoreRowModel, useReactTable,} from "@tanstack/react-table"
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table"
+import {useEffect} from "react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -19,6 +20,10 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
   })
 
+  //hide the id column from the table
+  useEffect(() => {
+    table.getColumn("id")?.toggleVisibility(false)
+  }, [table])
   return (
     <div className="rounded-md border">
       <Table>

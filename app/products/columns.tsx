@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import {Button} from "@/components/ui/button";
-import {BsThreeDotsVertical} from "react-icons/all";
+import {BsThreeDotsVertical} from "react-icons/bs";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context";
 
 

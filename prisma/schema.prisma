@@ -18,12 +18,11 @@ model User {
   email    String   @unique
   password String
   role     String   @default("USER")
-  Orders   Orders[]
 }
 
 model Orders {
   id        Int      @id @default(autoincrement())
-  user      User     @relation(fields: [id], references: [id])
+  user      Int
   total     Float
   // the items field is a string which will contain the product ids like "1,2,3,4"
   items     String
