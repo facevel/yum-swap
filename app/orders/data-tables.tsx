@@ -100,9 +100,9 @@ export function DataTable<TData, TValue>({
                                   <div className={"w-full bg-gray-100 dark:bg-gray-800 my-2 p-2 rounded-lg flex flex-row"}>
                                     <img src={
                                       item.substring(1).toLowerCase().includes('cola')
-                                        ? 'cock.jpg'
+                                        ? 'coke.jpg'
                                         : item.substring(1).toLowerCase().includes('sprite')
-                                          ? 'sproot.jpg'
+                                          ? 'sprite.jpg'
                                           : ''
                                     }
                                          alt={"img"}
