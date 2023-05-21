@@ -60,7 +60,7 @@ const Service = () => {
 
   const getBotResponse = async () => {
     setIsBotTyping(true)
-    const response = await fetch("/api/chat-api", {
+    const response = await fetch("/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -75,10 +75,6 @@ const Service = () => {
     setIsBotTyping(false)
   }
 
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
   // @ts-ignore
   return(
     <div className={"relative flex flex-col min-h-[calc(100vh-4.5rem)] bg-white dark:bg-black"}>
@@ -99,7 +95,7 @@ const Service = () => {
                       <div className={'col-span-2 flex flex-row justify-center items-center text-2xl'}>
                         {feature.emoji}
                       </div>
-                      <div className={'col-span-10 text-sm'}>
+                      <div className={'col-span-10 text-sm mt-2'}>
                         {feature.text}
                       </div>
                     </div>
@@ -132,7 +128,7 @@ const Service = () => {
                 }
               }}
               placeholder="Send a message."
-              className="m-0 w-full resize-none border-0 bg-transparent p-0 pr-6 focus:ring-0 focus-visible:ring-0 dark:bg-transparent pl-2 md:pl-0 height-[24px] max-h-[200px] overflow-y-hidden outline-transparent "
+              className="m-0 w-full resize-none border-0 bg-transparent p-0 pr-6 focus:ring-0 focus-visible:ring-0 dark:bg-transparent pl-2 md:pl-0 height-[24px] max-h-[200px] overflow-y-hidden outline-transparent border-transparent"
             >
 
             </TextareaAutosize>

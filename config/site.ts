@@ -21,5 +21,9 @@ export const siteConfig = {
       title: "Products",
       href: "/products",
     },
+    {
+      title: "Recipe Bot",
+      href: "/bot",
+    },
   ],
 }

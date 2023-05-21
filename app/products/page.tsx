@@ -63,7 +63,7 @@ export default function ProductsPage() {
                 <div className="mb-6 flex max-w-[980px] flex-col items-start gap-2">
                   <h1
                     className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-4xl lg:text-4xl">
-                    Good Evening, <br className="hidden sm:inline"/>
+                    Inventory Managment, <br className="hidden sm:inline"/>
                   </h1>
                   <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
                     Prakhar, here is your current inventory.

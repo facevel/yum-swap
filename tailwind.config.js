@@ -75,5 +75,6 @@ module.exports = {
   plugins: [
     require("tailwindcss-animate"),
     require("prettier-plugin-tailwindcss"),
+    require("tailwind-scrollbar"),
   ],
 }

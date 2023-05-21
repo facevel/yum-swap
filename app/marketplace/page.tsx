@@ -50,7 +50,7 @@ export default function IndexPage() {
     "id": 3,
     "name": "Rawpressery Apple Juice",
     "description": "Juice made from the best apples.",
-    "price": 1.99,
+    "price": 199,
     "expiry": new Date("2022-08-01"),
     "manufacturer": "Rawpressery Inc",
     "manufacturer_date": new Date("2022-05-11"),
