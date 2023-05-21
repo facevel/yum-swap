@@ -15,7 +15,8 @@ export interface Order {
   timestamp: string,
   total: number,
   user_id: string
-  status: string
+  status: string,
+  image: string;
 }
 
 export default function OrdersPage() {

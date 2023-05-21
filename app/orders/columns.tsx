@@ -17,6 +17,10 @@ import {TbChevronRight} from "react-icons/tb";
 export default function getColumns(router: AppRouterInstance): ColumnDef<Order>[] {
   return [
     {
+      accessorKey: "image",
+      header: "Images",
+    },
+    {
       accessorKey: "id",
       header: "Order ID",
     },
