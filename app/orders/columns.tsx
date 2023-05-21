@@ -52,9 +52,9 @@ export default function getColumns(router: AppRouterInstance): ColumnDef<Order>[
       header: "Total",
       cell: ({row}) => {
         return (
-          <p>
-            ₹ {row.getValue("total")}
-          </p>
+          <span className={'flex flex-row items-center flex-nowrap'}>
+            ₹&nbsp;{row.getValue("total")}
+          </span>
         )
       }
     },

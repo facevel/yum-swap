@@ -24,6 +24,7 @@ export function DataTable<TData, TValue>({
   useEffect(() => {
     table.getColumn("id")?.toggleVisibility(false)
   }, [table])
+
   return (
     <div className="rounded-md border">
       <Table>

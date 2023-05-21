@@ -1,13 +1,32 @@
 "use client"
 
-import {ColumnDef, flexRender, getCoreRowModel, useReactTable,} from "@tanstack/react-table"
+import React from "react"
+import { collection, getFirestore } from "@firebase/firestore"
+import {
+  ColumnDef,
+  flexRender,
+  getCoreRowModel,
+  useReactTable,
+} from "@tanstack/react-table"
+import { useCollection } from "react-firebase-hooks/firestore"
 
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table"
-import React from "react";
-import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
-import {useCollection} from "react-firebase-hooks/firestore";
-import {collection, getFirestore} from "@firebase/firestore";
-import firebase from "@/lib/firebase";
+import firebase from "@/lib/firebase"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -70,19 +89,19 @@ export function DataTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
 
                 <Sheet>
-                  <SheetTrigger className={"w-full"}>
                     <TableRow
                       key={row.id}
-                      className={"w-full"}
+                      className={""}
                       data-state={row.getIsSelected() && "selected"}
                     >
                       {row.getVisibleCells().map((cell) => (
                         <TableCell key={cell.id}>
+                          <SheetTrigger className={""}>
                           {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                          </SheetTrigger>
                         </TableCell>
                       ))}
                     </TableRow>
-                  </SheetTrigger>
                   <SheetContent>
                     <SheetHeader>
                       <SheetTitle> <span className={"dark:text-gray-500"}>Order </span>

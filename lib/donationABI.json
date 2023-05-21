@@ -1,0 +1,230 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_donorName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_ngoName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_donatedItemName",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_donatingDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_donatedItemQuantity",
+        "type": "uint256"
+      }
+    ],
+    "name": "addDonation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "donorName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "ngoName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "donatedItemName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "donatingDate",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "donatedItemQuantity",
+        "type": "uint256"
+      }
+    ],
+    "name": "DonationAdded",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "donationIds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "donations",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "donorName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "ngoName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "donatedItemName",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "donatingDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "donatedItemQuantity",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllDonations",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "donorName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "ngoName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "donatedItemName",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "donatingDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "donatedItemQuantity",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct DonationContract.Donation[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_donationId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getDonation",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

@@ -16,6 +16,8 @@ import {Button} from "@/components/ui/button";
 import {BsThreeDotsVertical} from "react-icons/bs";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context";
 import {Product} from "@/app/products/page";
+import { addDoc, collection, deleteDoc, doc, getFirestore, updateDoc } from "@firebase/firestore";
+import firebase from "@/lib/firebase";
 
 
 export default function getColumns(router: AppRouterInstance): ColumnDef<Product>[] {
@@ -105,8 +107,21 @@ export default function getColumns(router: AppRouterInstance): ColumnDef<Product
               <DropdownMenuContent align="start" className={""}>
                 <DropdownMenuLabel>Actions</DropdownMenuLabel>
                 <DropdownMenuSeparator/>
-                <DropdownMenuItem>List on Market</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => {
+                <DropdownMenuItem
+                  onClick={async () => {
+                    const docRef = await addDoc(collection(getFirestore(firebase!), "market"), {
+                      id: 20,
+                      name: "Coke",
+                      description: "This a Cold Drink",
+                      price: 20,
+                      expiry: "25/05/2023",
+                      manufacturer: "Coca Cola",
+                      image: "https://m.media-amazon.com/images/I/61Bn5-uzC1L._SX522_.jpg",
+                    });
+                    }
+                  }
+                >List on Market</DropdownMenuItem>
+                <DropdownMenuItem onClick={()   => {
                   donatedItemsStore.set({
                     ngoName: "",
                     donorName: "Prakhar",

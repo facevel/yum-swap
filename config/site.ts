@@ -9,5 +9,17 @@ export const siteConfig = {
       title: "Marketplace",
       href: "/marketplace",
     },
+    {
+      title: "All Donations",
+      href: "/donations",
+    },
+    {
+      title: "Orders",
+      href: "/orders",
+    },
+    {
+      title: "Products",
+      href: "/products",
+    },
   ],
 }
