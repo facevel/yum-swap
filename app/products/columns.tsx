@@ -1,7 +1,6 @@
 "use client"
 
 import {ColumnDef} from "@tanstack/react-table"
-import {Product} from ".prisma/client";
 import {format} from "date-fns";
 import parseISO from "date-fns/parseISO";
 import {donatedItemsStore} from "@/app/stores";
@@ -16,6 +15,7 @@ import {
 import {Button} from "@/components/ui/button";
 import {BsThreeDotsVertical} from "react-icons/bs";
 import {AppRouterInstance} from "next/dist/shared/lib/app-router-context";
+import {Product} from "@/app/products/page";
 
 
 export default function getColumns(router: AppRouterInstance): ColumnDef<Product>[] {
