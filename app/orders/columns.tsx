@@ -96,12 +96,12 @@ export default function getColumns(router: AppRouterInstance): ColumnDef<Order>[
 const getColorNames = (color: string) => {
   switch (color) {
     case "Received":
-      return "bg-blue-800 text-blue-400"
+      return "dark:bg-blue-800 dark:text-blue-400 bg-blue-300 text-blue-800"
     case "Dispatched":
-      return "bg-yellow-800 text-yellow-400"
+      return "dark:bg-yellow-800 dark:text-yellow-400 bg-yellow-300 text-yellow-800"
     case "Delivered":
-      return "bg-green-800 text-green-400"
+      return "dark:bg-green-800 dark:text-green-400 bg-green-300 text-green-800"
     default:
-      return "bg-green-800 text-green-400"
+      return "dark:bg-green-800 dark:text-green-400 bg-green-300 text-green-800"
   }
 }
