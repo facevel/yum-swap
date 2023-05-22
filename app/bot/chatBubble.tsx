@@ -44,7 +44,7 @@ const Chat = ({ chatData }) => {
                       </span>
                     )}
                     {message?.role === "user" && (
-                      <span className="relative flex h-[40px] w-[40px] items-center justify-center rounded-sm text-white">
+                      <span className="relative flex h-[30px] w-[30px] items-center justify-center rounded-sm bg-slate-950 text-white">
                         <FaUserAlt/>
                       </span>
                     )}

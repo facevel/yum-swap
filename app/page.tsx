@@ -21,7 +21,7 @@ export default function IndexPage() {
             and timely delivery of food to those in need.
           </p>
           <div className="flex gap-4">
-            <Button variant="outline">Learn More</Button>
+            <Button variant="outline">Contact Business</Button>
             <Link href={"/marketplace"}>
               <Button className={"flex flex-row items-center"}>
                 Continue to Marketplace
