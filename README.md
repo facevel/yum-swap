@@ -1,23 +1,22 @@
-# next-template
+# Yum Swap
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+A project made during NSUT E-CELL's Hack-a-prenuer 2023.
 
-## Usage
+## About
+Provides a marketplace for sellers to sell produce to businesses and consumers.
+These buyers will be notified when the produce they bought is about to expire, when users can choose to easily donate the food to charity. Businesses can choose to either sell this produce forward at discounted rates, or can also directly donate to charity.
 
-```bash
-npx create-next-app -e https://github.com/shadcn/next-template
-```
-
-## Features
-
-- Radix UI Primitives
+## Tech Stack
+- Next.js
 - Tailwind CSS
-- Fonts with `next/font`
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Automatic import sorting with `@ianvs/prettier-plugin-sort-imports`
-- Tailwind CSS class sorting, merging and linting.
+- Firebase
+- Vercel
+- Ether.js
+- Solidity
+- 5ire Blockchain
 
-## License
-
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+## File Structure
+- `lib/contract.sol` contains the smart contracts for the website
+- `pages` contains all the pages of the website
+- `components` contains all the components of the website
+- `public` contains all the static files of the website
